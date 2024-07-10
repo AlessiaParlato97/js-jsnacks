@@ -4,7 +4,7 @@ Modificate poi il programma in modo che venga chiesto all’utente
 il numero massimo consentito,
 e stampare tutta la tabellina del 2 fino al numero inserito.*/
 
-console.log('ARRAY 04');
+console.log('ARRAY 07');
 
 /*Stampare la tabellina del 2, fino al numero 1000.
 for (let i = 2; i < 1000; i++) {
