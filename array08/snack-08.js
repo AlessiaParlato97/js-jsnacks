@@ -28,23 +28,22 @@ form.addEventListener('submit', function (event) {
     const numeroUtente = parseInt(form.elements['numeroUtente'].value);
     console.log(numeroUtente);
 
-    // Ciclo finché l'utente non indovina il numero random.
-    while (numeroUtente !== numeroRandom) {
+
+
+    if (numeroUtente === numeroRandom) {
+        // L'utente indovina il numero random.
+        console.log("Complimenti! Hai indovinato il numero, hai vinto!");
+        // Dopo la vittoria l'utente non gioca più.
+        console.log("Fine del gioco.");
+        // Disabilita il form per evitare ulteriori tentativi
+        form.elements['numeroUtente'].disabled = true;
+
+    } else if (numeroUtente !== numeroRandom) {
         // Informa l'utente che ha perso e chiedi di inserire nuovamente il numero.
         console.log("Mi dispiace, hai perso. Riprova. Il numero era " + numeroRandom);
-        if (numeroUtente !== numeroRandom) {
-            // Chiedi nuovamente all'utente di inserire un numero
-            form.elements['numeroUtente'].value = '';
-            return;
-        } else if (numeroUtente === numeroRandom) {
-            // L'utente indovina il numero random.
-            console.log("Complimenti! Hai indovinato il numero, hai vinto!");
-            // Dopo la vittoria l'utente non gioca più.
-            console.log("Fine del gioco.");
-            // Disabilita il form per evitare ulteriori tentativi
-            form.elements['numeroUtente'].disabled = true;
-        }
+        // Chiedi nuovamente all'utente di inserire un numero
+        form.elements['numeroUtente'].value = '';
+        return;
+
     }
 });
-
-

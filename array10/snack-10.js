@@ -30,9 +30,6 @@ form.addEventListener('submit', function (event) {
             console.log("Hai inserito due volte consecutive lo stesso numero:", numeroUtente1);
             break;// Esci dal ciclo while
         }
-
-        // Aggiorna il numero precedente con quello corrente
-        //numeroUtente = numeroCorrente;
     }
 
     console.log("Fine del programma.");
